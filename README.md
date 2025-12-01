@@ -35,6 +35,8 @@ estatistica-tabelas-de-frequencia-python/
 │
 ├── main.py # Ponto de entrada do programa
 ├── tabela_frequencia.py # Lógica de cálculo e construção da tabela
+├── utils.py              → Funções de utilidade (ler lista de valores)
+├── testes.py             → Testes simples para funções individuais
 └── README.md # Documentação do projeto
 
 ## 🛠️REQUISITOS
