@@ -52,10 +52,12 @@ def ler_lista_numeros():
 
             return numeros  # Sucesso!
 
-        except ValueError:
-            print("❌ Erro: digite apenas números válidos separados por vírgula.")
-            print("Exemplo: 10, 20, 35, 7.5")
+        except ValueError as e :
+            print(f"❌ Erro:{e} ")
+            print("Use o formato:10,20,35,7.5")
             continue
+#alternado o except valuerror do arquivo utils.py 
+#add nos 2 print essa substituicao ....
 
 
 

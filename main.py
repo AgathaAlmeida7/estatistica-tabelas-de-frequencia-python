@@ -1,6 +1,8 @@
 #aqui é o meu ponto de entrada para o projeto 
 
 from utils import ler_lista_numeros
+from tabela_frequencia import preparar_dados
+
 # o que isso aqui significa?
 #R->'VA ATE O ARQUIVO UTILS.PY E TRAGA PARA CA A FUNCAO LER_LISTA_NUMEROS
 #AQUI EU TOU DIZENDO QUE EU SOU TOU PEGANDO A FUNCAO LER_LISTA_NUMEROS DO ARQUIVO UTILS
@@ -26,8 +28,8 @@ def main():
     #MAIN.PY->RECEBE O RESULTADO
     print("Valores digitados:", valores)
     #SIMPLESMENTE, EXIBE O QUE A FUNCAO RETORNOU 
-if __name__ == "__main__":
-    main()#SE O ARQUIVO TA SENDO EXECUTADO DIRETAMENTO(O CASO AO RODAR PYTHON MAIN.PY), ENTAO CHAMA A FUNCAO PRINCIPAL
+#if __name__ == "__main__":
+    #main()#SE O ARQUIVO TA SENDO EXECUTADO DIRETAMENTO(O CASO AO RODAR PYTHON MAIN.PY), ENTAO CHAMA A FUNCAO PRINCIPAL
 
     
 
@@ -35,3 +37,32 @@ if __name__ == "__main__":
 #ELA VERIFICA SE ESSE ARQUIVO ESTA SENDO EXECUTADO DIRETAMENTE
 #SE SIM, RODA A FUNCAO MAIN()
 #SE NAO , NAO RODA
+
+#TESTANDO A FUNCAO RESPONSAVEL DO BLOCO 02
+#PROCESSANDO ESTATISTICAMENTE
+
+#NAO PRECISA APAGAR A FUNCAO ANTERIOR,SO IREMOS SUBSTITUIR ELA NA CHAMADA NO MOMENTO DO TESTE
+#PQ NAO APAGAR?
+#O CODIGO DA ETAPA 01 CONTINUA UTIL PARA TESTAR PARTES ESPECIFICAS
+#É NORMAL UM PROJETO TER VARIAS FUNCOES DE TESTE DURANTE O DESENVOLVIMENTO
+#VOCE SO VAI ESCOLHER QUAL ETAPA QUER TESTAR NO MOMENTO, CHAMANDO A FUNCAO CERTA NO MAIN()
+
+def main_etapa02():
+    # Função principal da etapa 02
+
+    valores = ler_lista_numeros()
+
+    # AQUI é onde você realmente chama o bloco 02
+    valores_ordenados, v_min, v_max, amplitude = preparar_dados(valores)
+
+    print('\n---- RESULTADOS DO BLOCO 02 ----')
+    print('Valores Ordenados:', valores_ordenados)
+    print('Valor Mínimo:', v_min)
+    print('Valor Máximo:', v_max)
+    print('Amplitude:', amplitude)
+    print('-------------------------------')
+
+#CHAMANDO A ETAPA 02 PARA TESTAR
+
+if __name__ == "__main__":
+    main_etapa02()
