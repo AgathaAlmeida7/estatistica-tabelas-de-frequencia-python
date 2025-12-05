@@ -2,6 +2,11 @@
 
 from utils import ler_lista_numeros
 from tabela_frequencia import preparar_dados
+from tabela import gerar_tabela_frequencia
+from tabela_frequencia import preparar_dados,ler_numero_classes
+import math
+
+
 
 # o que isso aqui significa?
 #R->'VA ATE O ARQUIVO UTILS.PY E TRAGA PARA CA A FUNCAO LER_LISTA_NUMEROS
@@ -64,5 +69,83 @@ def main_etapa02():
 
 #CHAMANDO A ETAPA 02 PARA TESTAR
 
-if __name__ == "__main__":
-    main_etapa02()
+#if __name__ == "__main__":
+    #main_etapa02()
+
+#ETAPA BLOCO 03
+
+#CRIANDO UMA NOVA FUNCAO CHAMADA MAIN_ETAPA03()
+
+
+#VAI LER OS VALORES
+#LER O NUMERO DE CLASSES
+#GERAR INTERVALOS(USANDO SUA PROPRIA FUNCAO OU IMPORTACAO)
+#CHAMAR GERAR_TABELA_FREQUENCIA()
+#EXIBIR A TABELA
+
+
+def main_etapa03():
+    print("---- BLOCO 03: TABELA DE FREQUÊNCIAS ----")
+
+    # 1. Ler valores
+    valores = ler_lista_numeros()
+
+    # 2. Ler número de classes (k)
+    k = ler_numero_classes()
+
+    # 3. Preparar dados do bloco 02
+    valores_ordenados, v_min, v_max, amplitude = preparar_dados(valores)
+
+    # 4. Calcular tamanho da classe (h)
+    h_raw = amplitude / k
+    h = math.ceil(h_raw)
+
+    # 5. Gerar intervalos e pontos médios
+    limites_inferiores = []
+    limites_superiores = []
+    pontos_medios = []
+
+    inicio = v_min
+    for i in range(k):
+        fim = inicio + h
+        limites_inferiores.append(inicio)
+        limites_superiores.append(fim)
+        pontos_medios.append((inicio + fim) / 2)
+        inicio = fim
+
+    # 6. Chamar a tabela (BLOCO 03)
+    gerar_tabela_frequencia(
+        valores_ordenados,
+        limites_inferiores,
+        limites_superiores,
+        pontos_medios,
+        k
+    )
+
+if __name__=="__main__":
+    main_etapa03()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

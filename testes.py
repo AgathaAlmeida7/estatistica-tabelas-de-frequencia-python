@@ -1,7 +1,11 @@
 #arquivo que serve so para testar funcoes isoladamente enquanto se aprende
 # testes.py — verificação rápida do que existe para o BLOCO 03
 from utils import ler_lista_numeros
-from tabela_frequencia import preparar_dados, ler_numero_classes  # usar o que já tem
+from tabela_frequencia import preparar_dados, ler_numero_classes 
+from tabela import gerar_tabela_frequencia
+
+
+ # usar o que já tem
 
 import math
 
@@ -32,6 +36,12 @@ def main():
     valores = ler_lista_numeros()
     k = ler_numero_classes()
     lim_inf, lim_sup, pm, h, amplitude = gerar_intervalos_simples(valores, k)
+
+    from tabela import gerar_tabela_frequencia   # importa sua função
+
+# Chama a função que imprime a tabela completa (faz a contagem internamente)
+    print("\n-- Exibindo Tabela de Frequência (BLOCO 03) --")
+    (valores, lim_inf, lim_sup, pm, k)
 
     print("\nAmplitude total:", amplitude)
     print("Tamanho da classe (h):", h)

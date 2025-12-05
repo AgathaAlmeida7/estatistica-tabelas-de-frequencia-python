@@ -5,6 +5,11 @@
 #A PARTIR DAQUI JA ESTAMOS LIDANDO COM ESTATISTICA
 
 
+import math
+
+
+
+
 def preparar_dados(valores):
     #pq valores que recebeu aquela funcao veio como parametro para essa funcao de preparar dados?
     #ESTOU ORDENANDO OS VALORES QUE ESSA FUNCAO PREPARAR DADOS ACABOU DE RECEBER
@@ -67,4 +72,5 @@ def ler_numero_classes():
 #4-retorna um numero total seguro
 #so sai do loop quando o numero é certo
 #essa funcao, sera testada no arquivo main.py
+
 
